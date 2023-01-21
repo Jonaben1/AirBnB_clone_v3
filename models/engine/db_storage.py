@@ -81,7 +81,7 @@ class DBStorage:
            name or id
         """
         if cls and id:
-            fetch = f'{cls}.{id}'
+            fetch = "{}.{}".format(cls, id)
             all_obj = self.all(cls)
             return all_obj.get(fetch)
         return None
